@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+
+<div ng-app="app" ng-controller="MainController">
+  {{message}}
+  {{ counter.value }}
+  <button ng-click="clickButton()">Change the message</button>
+  <button ng-click="counter.increment()">Increment counter</button>
+
+  <hello-world value="counter.value"></hello-world>
+
+</div>
+
+<script src=".client/bundle.js"></script>
+
+</body>
+</html>

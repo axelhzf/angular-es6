@@ -1,0 +1,16 @@
+{
+  "name": "angular-es6",
+  "private": true,
+  "dependencies": {
+    "browserify": "^4.2.3",
+    "es6ify": "^1.2.0",
+    "traceur-runtime": "0.0.43"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-traceur": "^0.8.0",
+    "gulp-util": "^3.0.0",
+    "vinyl-source-stream": "^0.1.1",
+    "watchify": "^0.10.2"
+  }
+}
