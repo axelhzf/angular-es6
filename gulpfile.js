@@ -9,13 +9,10 @@ var watchify = require('watchify');
 var es6ify = require("es6ify");
 
 gulp.task('watch', function() {
-  var bundler = watchify('./app/client/main.js');
-
-  // Optionally, you can apply transforms
-  // and other configuration options on the
-  // bundler just as you would with browserify
-  bundler.transform(es6ify);
-  bundler.on('update', rebundle);
+  var bundler = watchify('./app/client/main.js')
+    .transform(es6ify)
+    .on('update', rebundle)
+    .on("log", gutil.log);
 
   function rebundle () {
     return bundler.bundle()
