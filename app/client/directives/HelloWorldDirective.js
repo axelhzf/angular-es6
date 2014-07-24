@@ -1,9 +1,9 @@
-var Directive = require("./lib/Directive");
+var Directive = require("../lib/Directive");
 
 class HelloWorldDirective extends Directive {
   constructor() {
     super();
-    this.template = require("./hello-world.jade");
+    this.template = require("../templates/hello-world.jade");
     this.restrict = "E";
     this.scope = {
       value: "="

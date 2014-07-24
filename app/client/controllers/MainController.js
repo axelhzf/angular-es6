@@ -1,5 +1,5 @@
-var Controller = require("./lib/Controller");
-var Counter = require("./Counter");
+var Controller = require("../lib/Controller");
+var Counter = require("../lib/Counter");
 
 class MainController extends Controller {
   constructor ($scope) {
