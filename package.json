@@ -10,6 +10,7 @@
     "gulp": "^3.8.6",
     "gulp-traceur": "^0.8.0",
     "gulp-util": "^3.0.0",
+    "jadeify": "^2.5.0",
     "vinyl-source-stream": "^0.1.1",
     "watchify": "^0.10.2"
   }

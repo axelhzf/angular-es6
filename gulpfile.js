@@ -7,10 +7,12 @@ var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 var es6ify = require("es6ify");
+var jadeify = require("jadeify");
 
 gulp.task('watch', function() {
   var bundler = watchify('./app/client/main.js')
     .transform(es6ify)
+    .transform(jadeify)
     .on('update', rebundle)
     .on("log", gutil.log);
 
