@@ -6,6 +6,9 @@ This is an example of how to use angular + es6 + Browserify
 ## Controllers
 
 ```js
+var Controller = require("../lib/Controller");
+var Counter = require("../lib/Counter");
+
 class MainController extends Controller {
   constructor ($scope) {
     super($scope);
@@ -25,15 +28,19 @@ class MainController extends Controller {
     console.log(`var message change ${oldValue} -> ${newValue}`);
   }
 }
+
+module.exports = MainController;
 ```
 
 ## Directives
 
 ```js
+var Directive = require("../lib/Directive");
+
 class HelloWorldDirective extends Directive {
   constructor() {
     super();
-    this.template = "<h1>Hello world {{message}} {{value}}</h1>";
+    this.template = require("../templates/hello-world.jade");
     this.restrict = "E";
     this.scope = {
       value: "="
@@ -44,4 +51,11 @@ class HelloWorldDirective extends Directive {
     this.$.message = "muahaha";
   }
 }
+
+module.exports = HelloWorldDirective;
 ```
+
+
+# Todo
+
+* jadeify - use compile instead of compileClient
